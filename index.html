@@ -1,0 +1,882 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Presales Talk | Cloud & Infrastructure Presales Training</title>
+<meta name="description" content="Master Cloud and Infrastructure Presales with 50+ hours of recorded training, practical frameworks and real-world case studies.">
+<meta property="og:title" content="Presales Talk | Learn Cloud & Infrastructure Presales">
+<meta property="og:description" content="Turn Technical Knowledge into Business Solutions. Explore the complete Presales Training Program.">
+<meta name="theme-color" content="#07111f">
+
+<style>
+:root {
+    --bg:#07111f;
+    --panel:#101f33;
+    --panel2:#142840;
+    --blue:#3988ff;
+    --cyan:#45d7e8;
+    --white:#f5f8ff;
+    --muted:#a8b8cc;
+    --green:#20c879;
+    --border:#263e59;
+}
+
+* { box-sizing:border-box; margin:0; padding:0; }
+
+html { scroll-behavior:smooth; scroll-padding-top:85px; }
+
+body {
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--bg);
+    color:var(--white);
+    line-height:1.65;
+}
+
+a { text-decoration:none; color:inherit; }
+
+.container { width:min(1160px,91%); margin:auto; }
+
+section { padding:85px 0; }
+
+.alt { background:#0b192a; }
+
+header {
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(7,17,31,.96);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid #23364e;
+}
+
+.nav {
+    min-height:76px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo {
+    font-size:27px;
+    font-weight:800;
+    letter-spacing:-1px;
+    white-space:nowrap;
+}
+
+.logo span { color:var(--cyan); }
+
+.navlinks {
+    display:flex;
+    align-items:center;
+    gap:23px;
+    color:var(--muted);
+    font-size:14px;
+}
+
+.navlinks a:hover { color:white; }
+
+.btn {
+    padding:13px 21px;
+    border-radius:9px;
+    display:inline-block;
+    font-weight:700;
+    font-size:14px;
+    border:1px solid transparent;
+    transition:.25s;
+    text-align:center;
+    cursor:pointer;
+}
+
+.btn:hover { transform:translateY(-3px); }
+
+.primary {
+    background:linear-gradient(120deg,var(--blue),#6d63ff);
+    color:white;
+}
+
+.outline {
+    border-color:#58718e;
+    color:white;
+}
+
+.whatsapp {
+    background:var(--green);
+    color:#042f1e;
+}
+
+.menu-btn {
+    display:none;
+    background:none;
+    color:white;
+    border:1px solid #3a526d;
+    border-radius:7px;
+    padding:8px 12px;
+    font-size:20px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero {
+    padding:90px 0 65px;
+    background:
+    radial-gradient(circle at 80% 20%,rgba(57,136,255,.25),transparent 30%),
+    radial-gradient(circle at 10% 80%,rgba(69,215,232,.12),transparent 30%);
+}
+
+.hero-grid {
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:50px;
+    align-items:center;
+}
+
+.eyebrow {
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:40px;
+    background:#122d49;
+    color:var(--cyan);
+    border:1px solid #2c597f;
+    text-transform:uppercase;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.7px;
+}
+
+h1 {
+    font-size:clamp(40px,6vw,66px);
+    line-height:1.1;
+    margin:22px 0;
+    letter-spacing:-2px;
+}
+
+.gradient {
+    background:linear-gradient(90deg,#5fd7ff,#7f8eff);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+}
+
+.hero-description {
+    color:var(--muted);
+    font-size:18px;
+    max-width:650px;
+}
+
+.actions {
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    margin-top:28px;
+}
+
+.hero-note {
+    margin-top:20px;
+    color:#88a4c4;
+    font-size:14px;
+}
+
+.preview {
+    background:linear-gradient(145deg,#142b46,#0c192b);
+    border:1px solid #294563;
+    border-radius:20px;
+    padding:28px;
+    box-shadow:0 25px 80px rgba(0,0,0,.35);
+}
+
+.preview-top {
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    color:var(--muted);
+    font-size:12px;
+    margin-bottom:20px;
+}
+
+.live { color:#5ee6ad; }
+
+.preview h3 { margin-bottom:18px; font-size:22px; }
+
+.topic {
+    padding:12px 0;
+    display:flex;
+    gap:12px;
+    border-bottom:1px solid #29405a;
+    font-size:14px;
+    color:#dce8f7;
+}
+
+.topic:last-child { border-bottom:none; }
+
+.tick { color:var(--cyan); font-weight:bold; }
+
+.stats {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-top:55px;
+}
+
+.stat {
+    background:#0d1b2d;
+    border:1px solid #243b56;
+    padding:20px;
+    border-radius:12px;
+}
+
+.stat strong {
+    display:block;
+    font-size:25px;
+    color:var(--cyan);
+}
+
+.stat span { color:var(--muted); font-size:13px; }
+
+/* SECTION HEADINGS */
+
+.section-head {
+    max-width:780px;
+    margin:0 auto 45px;
+    text-align:center;
+}
+
+.section-head h2 {
+    font-size:clamp(29px,4vw,42px);
+    line-height:1.2;
+    margin:16px 0;
+}
+
+.section-head p { color:var(--muted); }
+
+/* CARDS */
+
+.grid3 {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.grid2 {
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.card {
+    background:var(--panel);
+    border:1px solid var(--border);
+    padding:25px;
+    border-radius:15px;
+    transition:.25s;
+}
+
+.card:hover {
+    transform:translateY(-4px);
+    border-color:#4f94ee;
+}
+
+.card-icon { font-size:29px; margin-bottom:12px; }
+
+.card h3 { font-size:19px; margin-bottom:9px; }
+
+.card p { color:var(--muted); font-size:14px; }
+
+.module-number {
+    color:var(--cyan);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+/* CASE STUDIES */
+
+.case-card {
+    background:linear-gradient(145deg,#142840,#0d1b2d);
+    border:1px solid #2a4664;
+    border-radius:15px;
+    padding:25px;
+}
+
+.case-label {
+    color:var(--cyan);
+    font-size:12px;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.case-card h3 { margin:10px 0; }
+
+.case-card p { color:var(--muted); font-size:14px; }
+
+/* AUDIENCE */
+
+.audience {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+}
+
+.tag {
+    padding:11px 18px;
+    border-radius:30px;
+    background:#12243a;
+    border:1px solid #34516e;
+    color:#dce8f7;
+    font-size:14px;
+}
+
+/* LEARNING STEPS */
+
+.steps {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.step {
+    background:var(--panel);
+    padding:25px;
+    border-left:4px solid var(--blue);
+    border-radius:8px;
+}
+
+.step b { color:var(--cyan); font-size:13px; }
+
+.step h3 { margin:10px 0; }
+
+.step p { color:var(--muted); font-size:14px; }
+
+/* FAQ */
+
+.faq { max-width:850px; margin:auto; }
+
+details {
+    background:var(--panel);
+    border:1px solid #27415d;
+    border-radius:10px;
+    margin-bottom:12px;
+    padding:18px;
+}
+
+summary {
+    cursor:pointer;
+    font-weight:700;
+}
+
+summary::marker { color:var(--cyan); }
+
+details p {
+    margin-top:12px;
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* CTA */
+
+.cta {
+    text-align:center;
+    padding:70px 30px;
+    border-radius:20px;
+    background:radial-gradient(circle at top right,#274f83,#10233b 60%);
+    border:1px solid #35597e;
+}
+
+.cta h2 {
+    font-size:clamp(29px,4vw,42px);
+    line-height:1.2;
+    margin:18px 0;
+}
+
+.cta p {
+    color:#d0dceb;
+    max-width:700px;
+    margin:15px auto;
+}
+
+.cta .actions { justify-content:center; }
+
+/* FOOTER */
+
+footer {
+    padding:35px 0;
+    border-top:1px solid #24384f;
+    background:#06101d;
+}
+
+.footer-inner {
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.footer-inner p { color:var(--muted); font-size:13px; }
+
+.footer-links {
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    font-size:14px;
+    color:var(--muted);
+}
+
+.footer-links a:hover { color:white; }
+
+.float-wa {
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:90;
+    background:var(--green);
+    color:#02271a;
+    padding:14px 20px;
+    border-radius:40px;
+    font-weight:700;
+    box-shadow:0 8px 25px rgba(0,0,0,.35);
+}
+
+/* MOBILE */
+
+@media(max-width:850px) {
+    .hero-grid { grid-template-columns:1fr; }
+    .grid2,.grid3 { grid-template-columns:repeat(2,1fr); }
+    .steps { grid-template-columns:1fr; }
+    .navlinks {
+        display:none;
+        position:absolute;
+        top:76px;
+        left:0;
+        width:100%;
+        padding:20px;
+        background:#0b192a;
+        flex-direction:column;
+        align-items:flex-start;
+        border-bottom:1px solid #294563;
+    }
+    .navlinks.show { display:flex; }
+    .menu-btn { display:block; }
+}
+
+@media(max-width:560px) {
+    section { padding:60px 0; }
+    .grid2,.grid3 { grid-template-columns:1fr; }
+    .stats { grid-template-columns:repeat(2,1fr); gap:9px; }
+    .stat { padding:14px; }
+    .stat strong { font-size:21px; }
+    .hero { padding:65px 0 45px; }
+    h1 { font-size:42px; }
+    .hero-description { font-size:16px; }
+    .preview { padding:20px; }
+    .preview-top { flex-direction:column; }
+    .footer-inner { flex-direction:column; }
+    .float-wa { right:12px; bottom:12px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+
+<a class="logo" href="#home">Presales<span>Talk</span></a>
+
+<nav class="navlinks" id="navlinks">
+<a href="#program">Program</a>
+<a href="#syllabus">Syllabus</a>
+<a href="#cases">Case Studies</a>
+<a href="#audience">Who It's For</a>
+<a href="#faq">FAQs</a>
+</nav>
+
+<div style="display:flex;align-items:center;gap:12px">
+<a class="btn whatsapp" href="https://wa.me/918756680477?text=Hi%2C%20I%20am%20interested%20in%20Presales%20Talk%20training.%20Please%20share%20the%20course%20details." target="_blank" rel="noopener">Enquire Now ↗</a>
+<button class="menu-btn" onclick="toggleMenu()" aria-label="Open navigation menu">☰</button>
+</div>
+
+</div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="container">
+
+<div class="hero-grid">
+
+<div>
+<span class="eyebrow">Cloud & Infrastructure Presales Training</span>
+
+<h1>
+Turn Technical Knowledge into
+<span class="gradient">Business Solutions.</span>
+</h1>
+
+<p class="hero-description">
+Move beyond technical execution. Understand how to discover customer
+requirements, design solutions, prepare proposals and communicate
+business value through the complete presales lifecycle.
+</p>
+
+<div class="actions">
+<a href="#program" class="btn primary">Explore the Program →</a>
+
+<a href="https://www.youtube.com/@presalestalk"
+class="btn outline" target="_blank" rel="noopener">
+▶ Watch Free Lessons
+</a>
+</div>
+
+<div class="hero-note">
+✓ 50+ Hours of Recorded Training &nbsp; | &nbsp; ✓ Self-Paced Learning
+</div>
+</div>
+
+<div class="preview">
+<div class="preview-top">
+<span>YOUR LEARNING ROADMAP</span>
+<span class="live">● RECORDED PROGRAM</span>
+</div>
+
+<h3>From Requirement to Solution</h3>
+
+<div class="topic"><span class="tick">✓</span> Customer discovery & qualification</div>
+<div class="topic"><span class="tick">✓</span> RFI, RFP, RFQ & bid management</div>
+<div class="topic"><span class="tick">✓</span> Cloud & infrastructure architecture</div>
+<div class="topic"><span class="tick">✓</span> HLD, LLD, sizing & BoQ</div>
+<div class="topic"><span class="tick">✓</span> Data Centre, DR & migration</div>
+<div class="topic"><span class="tick">✓</span> Costing & managed services</div>
+<div class="topic"><span class="tick">✓</span> Cybersecurity & solution defence</div>
+</div>
+
+</div>
+
+<div class="stats">
+<div class="stat"><strong>50+ Hours</strong><span>Recorded training content</span></div>
+<div class="stat"><strong>End-to-End</strong><span>Presales lifecycle coverage</span></div>
+<div class="stat"><strong>Case-Based</strong><span>Real-world scenarios</span></div>
+<div class="stat"><strong>Self-Paced</strong><span>Learn at your convenience</span></div>
+</div>
+
+</div>
+</section>
+
+<!-- PROGRAM -->
+<section id="program">
+<div class="container">
+
+<div class="section-head">
+<span class="eyebrow">Why Presales Talk?</span>
+<h2>Think Beyond Technology. <span class="gradient">Think Solutions.</span></h2>
+<p>Presales connects customer business requirements with the right technical and commercial solution.</p>
+</div>
+
+<div class="grid3">
+
+<div class="card">
+<div class="card-icon">🔍</div>
+<h3>Discover Requirements</h3>
+<p>Understand customer challenges, ask the right questions and qualify opportunities before proposing a solution.</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🏗️</div>
+<h3>Design the Solution</h3>
+<p>Translate requirements into cloud, infrastructure, cybersecurity and data centre architectures.</p>
+</div>
+
+<div class="card">
+<div class="card-icon">📊</div>
+<h3>Build the Proposal</h3>
+<p>Prepare compliance responses, BoQs, costing, assumptions and solution presentations.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- SYLLABUS -->
+<section class="alt" id="syllabus">
+<div class="container">
+
+<div class="section-head">
+<span class="eyebrow">Complete Course Curriculum</span>
+<h2>What Will You Learn?</h2>
+<p>A structured journey through the key activities performed by Cloud and Infrastructure Presales professionals.</p>
+</div>
+
+<div class="grid2">
+
+<div class="card">
+<span class="module-number">MODULE 01</span>
+<h3>Presales Foundations</h3>
+<p>Presales roles, sales lifecycle, opportunity qualification, bid/no-bid decisions and stakeholder engagement.</p>
+</div>
+
+<div class="card">
+<span class="module-number">MODULE 02</span>
+<h3>Customer Discovery</h3>
+<p>Requirement gathering, discovery questionnaires, BANT concepts, customer workshops and business needs.</p>
+</div>
+
+<div class="card">
+<span class="module-number">MODULE 03</span>
+<h3>RFI, RFP, RFQ & Bid Management</h3>
+<p>Tender documents, compliance matrices, technical responses, deviations and bid coordination.</p>
+</div>
+
+<div class="card">
+<span class="module-number">MODULE 04</span>
+<h3>Cloud & Infrastructure Architecture</h3>
+<p>Cloud concepts, AWS, Azure, servers, virtualization, storage, networking and solution design.</p>
+</div>
+
+<div class="card">
+<span class="module-number">MODULE 05</span>
+<h3>HLD, LLD, Sizing & BoQ</h3>
+<p>Architecture documentation, compute and storage sizing, network components and bill of quantities.</p>
+</div>
+
+<div class="card">
+<span class="module-number">MODULE 06</span>
+<h3>Data Centre, DR & Migration</h3>
+<p>Data centre concepts, disaster recovery models, migration approaches, backup and business continuity.</p>
+</div>
+
+<div class="card">
+<span class="module-number">MODULE 07</span>
+<h3>Costing & Managed Services</h3>
+<p>Licensing, OEM costs, FTE estimation, managed services, commercials, risks and dependencies.</p>
+</div>
+
+<div class="card">
+<span class="module-number">MODULE 08</span>
+<h3>Cybersecurity & Solution Defence</h3>
+<p>IAM, SIEM, endpoint security, compliance concepts and presenting the proposed solution.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="cases">
+<div class="container">
+
+<div class="section-head">
+<span class="eyebrow">Learn Through Scenarios</span>
+<h2>Connect Concepts with <span class="gradient">Real-World Presales.</span></h2>
+<p>Understand how presales thinking is applied to customer requirements, architecture and proposals.</p>
+</div>
+
+<div class="grid3">
+
+<div class="case-card">
+<span class="case-label">CASE STUDY 01</span>
+<h3>Data Centre & Disaster Recovery</h3>
+<p>Explore infrastructure requirements, server and storage sizing, network design, resilience and DR architecture considerations.</p>
+</div>
+
+<div class="case-card">
+<span class="case-label">CASE STUDY 02</span>
+<h3>Enterprise Cloud Migration</h3>
+<p>Understand discovery, workload assessment, migration planning, target architecture and proposal considerations.</p>
+</div>
+
+<div class="case-card">
+<span class="case-label">CASE STUDY 03</span>
+<h3>RFP & Solution Proposal</h3>
+<p>Explore how customer requirements are translated into compliance responses, technical architecture and a commercial proposal.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- AUDIENCE -->
+<section class="alt" id="audience">
+<div class="container">
+
+<div class="section-head">
+<span class="eyebrow">Who Should Join?</span>
+<h2>Is This Program Right for You?</h2>
+<p>Designed for IT professionals who want to understand how technical solutions are shaped, proposed and presented.</p>
+</div>
+
+<div class="audience">
+<span class="tag">Cloud Engineers</span>
+<span class="tag">Infrastructure Engineers</span>
+<span class="tag">System Administrators</span>
+<span class="tag">Network Engineers</span>
+<span class="tag">Data Centre Professionals</span>
+<span class="tag">Technical Consultants</span>
+<span class="tag">Solution Architects</span>
+<span class="tag">Technical Leads</span>
+<span class="tag">Aspiring Presales Professionals</span>
+</div>
+
+</div>
+</section>
+
+<!-- ENROLMENT -->
+<section>
+<div class="container">
+
+<div class="section-head">
+<span class="eyebrow">Simple Enrolment Journey</span>
+<h2>Start Learning in Three Steps</h2>
+<p>Get the information you need before you decide to enrol.</p>
+</div>
+
+<div class="steps">
+
+<div class="step">
+<b>STEP 01</b>
+<h3>Request Course Details</h3>
+<p>Connect on WhatsApp to receive the syllabus, program information and current enrolment details.</p>
+</div>
+
+<div class="step">
+<b>STEP 02</b>
+<h3>Explore Sample Lessons</h3>
+<p>Watch available free videos on YouTube to understand the teaching approach and subject coverage.</p>
+</div>
+
+<div class="step">
+<b>STEP 03</b>
+<h3>Enrol & Start Learning</h3>
+<p>Review the course details and access instructions before proceeding with enrolment.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="alt" id="faq">
+<div class="container">
+
+<div class="section-head">
+<span class="eyebrow">Frequently Asked Questions</span>
+<h2>Things You May Want to Know</h2>
+</div>
+
+<div class="faq">
+
+<details>
+<summary>Who should consider this program?</summary>
+<p>Cloud, infrastructure, network and system administration professionals, technical consultants and aspiring presales professionals. Basic familiarity with IT infrastructure is helpful.</p>
+</details>
+
+<details>
+<summary>Is the training live or recorded?</summary>
+<p>This offering covers 50+ hours of recorded training that you can study at your own pace. Confirm the current access duration and delivery details before enrolment.</p>
+</details>
+
+<details>
+<summary>What topics are covered?</summary>
+<p>The curriculum includes customer discovery, RFI/RFP/RFQ, bid management, cloud and infrastructure architecture, HLD/LLD, sizing, BoQ, costing, managed services and cybersecurity concepts.</p>
+</details>
+
+<details>
+<summary>Does the program include hands-on labs?</summary>
+<p>The program focuses on presales concepts, processes, architecture discussions and real-world case studies. It is not advertised as a hands-on lab program.</p>
+</details>
+
+<details>
+<summary>Can I watch free lessons before enrolling?</summary>
+<p>Yes. Visit the Presales Talk YouTube channel to explore the available free lessons.</p>
+</details>
+
+<details>
+<summary>How do I get the course fee and enrolment details?</summary>
+<p>Send a WhatsApp enquiry to receive the latest fee, syllabus, access details and enrolment process.</p>
+</details>
+
+</div>
+</div>
+</section>
+
+<!-- FINAL CTA -->
+<section>
+<div class="container">
+
+<div class="cta">
+<span class="eyebrow">Your Presales Journey Starts Here</span>
+
+<h2>Ready to Move Beyond Technical Execution?</h2>
+
+<p>
+Explore the complete Cloud & Infrastructure Presales training program.
+Request the syllabus, sample lessons and current enrolment details.
+</p>
+
+<div class="actions">
+<a class="btn whatsapp"
+href="https://wa.me/918756680477?text=Hi%2C%20I%20am%20interested%20in%20the%20Presales%20Talk%20training.%20Please%20share%20the%20syllabus%20and%20enrolment%20details."
+target="_blank" rel="noopener">
+Chat on WhatsApp ↗
+</a>
+
+<a class="btn outline"
+href="https://www.youtube.com/@presalestalk"
+target="_blank" rel="noopener">
+Explore YouTube Channel ↗
+</a>
+</div>
+</div>
+
+</div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+<div class="container footer-inner">
+
+<div>
+<div class="logo">Presales<span>Talk</span></div>
+<p>Turning Technical Knowledge into Business Solutions.</p>
+<p>Learn. Apply. Grow.</p>
+<p>© <span id="year"></span> Presales Talk. All rights reserved.</p>
+</div>
+
+<div class="footer-links">
+<a href="https://www.youtube.com/@presalestalk" target="_blank" rel="noopener">YouTube</a>
+<a href="https://whatsapp.com/channel/0029VbE5kefJf05k2ymz2V1X" target="_blank" rel="noopener">WhatsApp Channel</a>
+<a href="https://wa.me/918756680477" target="_blank" rel="noopener">Contact</a>
+</div>
+
+</div>
+</footer>
+
+<a class="float-wa"
+href="https://wa.me/918756680477?text=Hi%2C%20please%20share%20Presales%20Talk%20course%20details."
+target="_blank" rel="noopener">
+☏ WhatsApp Enquiry
+</a>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+function toggleMenu() {
+    document.getElementById("navlinks").classList.toggle("show");
+}
+
+document.querySelectorAll("#navlinks a").forEach(function(link) {
+    link.addEventListener("click", function() {
+        document.getElementById("navlinks").classList.remove("show");
+    });
+});
+</script>
+
+</body>
+</html>
